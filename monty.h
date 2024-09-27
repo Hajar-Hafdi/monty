@@ -46,7 +46,8 @@ extern stack_t *stack_top;
 typedef void (*operation_func)(stack_t **, unsigned int);
 
 
-
+void open_file(const char *filename);
+void close_file(FILE *file);
 void init_file(char *file_setup);
 void del_top(stack_t **stack, unsigned int l_ber);
 void output_stack(stack_t **stack,  unsigned int l_ber);
