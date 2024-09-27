@@ -41,6 +41,7 @@ typedef struct instruction_s
 	void (*f)(stack_t **stack, unsigned int line_number);
 } instruction_t;
 
+extern stack_t *head;
 extern stack_t *stack_top;
 typedef void (*operation_func)(stack_t **, unsigned int);
 
@@ -80,7 +81,6 @@ void str_er(int err_code, ...);
 void mre_errors(int err_code, ...);
 void error_msg(int err_code, ...);
 void subst_nodes(stack_t **stack, unsigned int l_ber);
-stack_t *head = NULL;
 void fetch_function(char *opde, char *val, int l_ber, int fomat);
 
 
