@@ -1,5 +1,7 @@
 #include "monty.h"
 #include <stdio.h>
+void open_file(const char *filename);
+void close_file(FILE *file);
 
 /**
  * init_file - initializes a file

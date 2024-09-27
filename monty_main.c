@@ -1,6 +1,7 @@
 #include "monty.h"
 void open_file(const char *filename);
 stack_t *head = NULL;
+void open_file(const char *filename);
 
 
 /**
