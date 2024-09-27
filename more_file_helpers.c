@@ -30,8 +30,8 @@ void fetch_function(char *opde, char *val, int l_ber, int fomat)
 		{"mod", modf_nodes},
 		{"pchar", output_char},
 		{"pstr", output_str},
-		{"rotl", rotlft},
-		{"rotr", rotrgt},
+		{"rotl", rotl},
+		{"rotr", rotr},
 		{NULL, NULL}
 	};
 	if (opde[0] == '#')

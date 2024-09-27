@@ -50,7 +50,7 @@ void output_str(stack_t **stack, __attribute__((unused))unsigned int  l_ber)
  * @stack: pointer
  * @l_ber: line num
  */
-void rotlft(stack_t **stack, __attribute__((unused))unsigned int l_ber)
+void rotl(stack_t **stack, __attribute__((unused))unsigned int l_ber)
 {
 	stack_t *tp;
 
@@ -71,7 +71,7 @@ void rotlft(stack_t **stack, __attribute__((unused))unsigned int l_ber)
  * @stack: pointer
  * @l_ber: line number
  */
-void rotrgt(stack_t **stack, __attribute__((unused))unsigned int l_ber)
+void rotr(stack_t **stack, __attribute__((unused))unsigned int l_ber)
 {
 	stack_t *tp;
 
