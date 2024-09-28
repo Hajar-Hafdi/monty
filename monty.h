@@ -46,28 +46,25 @@ extern stack_t *stack_top;
 typedef void (*operation_func)(stack_t **, unsigned int);
 
 
-void open_file(const char *filename);
-void close_file(FILE *file);
 void init_file(char *file_setup);
-void del_top(stack_t **stack, unsigned int l_ber);
 void output_stack(stack_t **stack,  unsigned int l_ber);
 void apn_stack(stack_t **n_node, __attribute__((unused))unsigned int l_ber);
 void output_char(stack_t **stack, unsigned int l_ber);
 void output_str(stack_t **stack, __attribute__((unused))unsigned int  l_ber);
 void rotl(stack_t **stack, __attribute__((unused))unsigned int l_ber);
 void rotr(stack_t **stack, __attribute__((unused))unsigned int l_ber);
-void del_top(stack_t **stack, unsigned int l_ber);
 void output_stack(stack_t **stack,  unsigned int l_ber);
 void multp_nodes(stack_t **stack, unsigned int l_ber);
 void modf_nodes(stack_t **stack, unsigned int l_ber);
 void apn_nodes(stack_t **stack, unsigned int l_ber);
-void switch_nodes(stack_t **stack, unsigned int l_ber);
+void swap_n(stack_t **stack, unsigned int l_ber);
 void nop(stack_t **stack, unsigned int l_ber);
 void output_top(stack_t **stack, unsigned int l_ber);
 
-void exec_func(operation_func fun, char *opode, char *vale, int l_ber, int fomat);
-void close_file(FILE *file);
+void ex_fun(operation_func fun, char *opode, char *vale, int l_ber, int fomat);
 char *parse_line(char *buf, char *l_ber, char *fomat);
+void pop_t(stack_t **stack, unsigned int l_ber);
+void output_top(stack_t **stack, unsigned int l_ber);
 
 int main(int arc, char *arv[]);
 stack_t *make_node(int num);

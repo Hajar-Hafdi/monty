@@ -13,7 +13,7 @@ int main(int arc, char *arv[])
 {
 	if (arc != 2)
 	{
-		fprintf(stderr, "RUN: monty file\n");
+		fprintf(stderr, "USAGE: monty file\n");
 		exit(EXIT_FAILURE);
 	}
 	init_file(arv[1]);

@@ -35,20 +35,22 @@ void output_stack(stack_t **stack,  unsigned int l_ber)
 	(void) l_ber;
 	if (stack == NULL)
 		exit(EXIT_FAILURE);
-	for (tp = *stack; tp != NULL; tp = tp->next)
+	tp = *stack;
+	while (tp != NULL)
 	{
 		printf("%d\n", tp->n);
+		tp = tp->next;
 	}
 }
 /**
- * del_top - appends a nd to stck
+ * pop_t - appends a nd to stck
  *
  * @stack: ptr
  * @l_ber: line num
  *
  * Return: void
  */
-void del_top(stack_t **stack, unsigned int l_ber)
+void pop_t(stack_t **stack, unsigned int l_ber)
 {
 	stack_t *tp;
 

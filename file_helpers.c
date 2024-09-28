@@ -30,10 +30,9 @@ void process_file(FILE *fd)
 	char *buf = NULL;
 	size_t ln = 0;
 
-	while (getline(&buf, &ln, fd) != -1)
+	for (l_ber = 1; getline(&buf, &ln, fd) != -1; l_ber++)
 	{
 		fomat = tok_line(buf, l_ber, fomat);
-		l_ber++;
 	}
 	free(buf);
 }

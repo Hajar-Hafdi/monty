@@ -45,7 +45,7 @@ void output_str(stack_t **stack, __attribute__((unused))unsigned int  l_ber)
 	printf("\n");
 }
 /**
- * rotlft -rotates 1st node
+ * rotl -rotates 1st node
  *
  * @stack: pointer
  * @l_ber: line num
@@ -66,7 +66,7 @@ void rotl(stack_t **stack, __attribute__((unused))unsigned int l_ber)
 	(*stack)->prev = NULL;
 }
 /**
- * rotrgt - rotates last node to top
+ * rotr - rotates last node to top
  *
  * @stack: pointer
  * @l_ber: line number

@@ -20,9 +20,9 @@ void fetch_function(char *opde, char *val, int l_ber, int fomat)
 		{"push", apn_stack},
 		{"pall", output_stack},
 		{"pint", output_top},
-		{"pop", del_top},
+		{"pop", pop_t},
 		{"nop", nop},
-		{"swap", switch_nodes},
+		{"swap", swap_n},
 		{"add", apn_nodes},
 		{"sub", subst_nodes},
 		{"div", divsn_nodes},
@@ -38,17 +38,17 @@ void fetch_function(char *opde, char *val, int l_ber, int fomat)
 		return;
 	for (flg = 1, u = 0; func_list[u].opcode != NULL; u++)
 	{
-		 if (strcmp(opde, func_list[u].opcode) == 0)
-		 {
-			 exec_func(func_list[u].f, opde, val, l_ber, fomat);
+		if (strcmp(opde, func_list[u].opcode) == 0)
+		{
+			 ex_fun(func_list[u].f, opde, val, l_ber, fomat);
 			 flg = 0;
-		 }
+		}
 	}
 	if (flg == 1)
 		error_msg(3, l_ber, opde);
 }
 /**
- * exec_func - executes function
+ * ex_fun - executes function
  *
  * @fun: ptr to function to be executed
  * @opode: opcode
@@ -57,7 +57,7 @@ void fetch_function(char *opde, char *val, int l_ber, int fomat)
  * @fomat: format specifier
  * 1 if entered as queue
  */
-void exec_func(operation_func fun, char *opode, char *vale, int l_ber, int fomat)
+void ex_fun(operation_func fun, char *opode, char *vale, int l_ber, int fomat)
 {
 	stack_t *nd;
 	int flg;
