@@ -1,7 +1,4 @@
 #include "monty.h"
-#include <stdio.h>
-void open_file(const char *filename);
-void close_file(FILE *file);
 
 /**
  * init_file - initializes a file
@@ -18,7 +15,7 @@ void init_file(char *file_setup)
 		error_msg(2, file_setup);
 
 	process_file(fd);
-	close_file(fd);
+	fclose(fd);
 }
 /**
  * process_file - processes a file

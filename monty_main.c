@@ -1,8 +1,5 @@
 #include "monty.h"
-void open_file(const char *filename);
 stack_t *head = NULL;
-void open_file(const char *filename);
-
 
 /**
  * main - program start
@@ -19,7 +16,7 @@ int main(int arc, char *arv[])
 		fprintf(stderr, "RUN: monty file\n");
 		exit(EXIT_FAILURE);
 	}
-	open_file(arv[1]);
+	init_file(arv[1]);
 	free_nodes();
 	return (0);
 }
