@@ -19,10 +19,10 @@ void str_er(int err_code, ...)
 	switch (err_code)
 	{
 		case 10:
-			fprintf(stderr, "Line%d: unable to pchar\n", l_ber);
+			fprintf(stderr, "L%d: can't pchar, value out of range\n", l_ber);
 			break;
 		case 11:
-			fprintf(stderr, "Line%d: unable to pchar since stack is empty\n",
+			fprintf(stderr, "L%d: can't pchar, stack empty\n",
 					l_ber);
 			break;
 		default:
